@@ -1,0 +1,26 @@
+version: '3.5'
+
+services:
+  frontend:
+    build: ./frontend
+    command: bash -c 'cd /frontend; yarn; yarn start'
+    volumes:
+      - ./frontend:/frontend
+      - /frontend/node_modules
+
+  nginx:
+    build:
+      context: ./nginx
+      args:
+        CONFIG_FILE: nginx.conf
+    ports:
+      - 8001:80
+
+
+
+
+
+
+
+
+
