@@ -1,0 +1,13 @@
+{
+    "extends": ["typescript", "typescript/react", "typescript/prettier", "typescript/prettier-react"],
+    "rules": {
+        "excludedFiles": "*.js",
+        "@typescript-eslint/explicit-function-return-type": [
+            "warn",
+            {
+                "allowExpressions": true,
+                "allowTypedFunctionExpressions": true
+            }
+        ]
+    }
+}
