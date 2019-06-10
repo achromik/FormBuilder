@@ -1,4 +1,9 @@
 {
+    "env": {
+        "node": true,
+        "commonjs": true,
+        "es6": true
+    },
     "extends": ["typescript", "typescript/react", "typescript/prettier", "typescript/prettier-react"],
     "rules": {
         "excludedFiles": "*.js",
@@ -9,5 +14,19 @@
                 "allowTypedFunctionExpressions": true
             }
         ]
-    }
+    },
+    "overrides": [
+        {
+            "files": ["config-overrides.js"],
+            "rules": {
+                "@typescript-eslint/no-var-requires": "off"
+            }
+        },
+        {
+            "files": ["src/index.tsx"],
+            "env": {
+                "browser": true
+            }
+        }
+    ]
 }
