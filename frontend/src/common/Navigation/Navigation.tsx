@@ -1,10 +1,10 @@
-import * as React from 'react'
+import * as React from 'react';
 //@ts-ignore
-import styled from '@emotion/styled/macro'
-import { Link } from 'react-router-dom'
+import styled from '@emotion/styled/macro';
+import { Link } from 'react-router-dom';
 
-import { colors } from '@src/variables'
-import { navItems } from '@src/data/config'
+import { colors } from '@src/variables';
+import { navItems } from '@src/data/config';
 
 const NavBar = styled.div`
     display: flex;
@@ -15,7 +15,7 @@ const NavBar = styled.div`
     height: 4rem;
     background-color: ${colors.navbarBackgroundColor};
     padding: 0 4rem;
-`
+`;
 
 const NavItem = styled.li`
     display: flex;
@@ -26,7 +26,7 @@ const NavItem = styled.li`
     flex: 0 1 auto;
     width: 8rem;
     height: 100%;
-`
+`;
 
 const NavLink = styled(Link)`
     text-decoration: none;
@@ -37,12 +37,12 @@ const NavLink = styled(Link)`
             color: ${colors.secondaryTextColor};
         }
     }
-`
+`;
 
 interface NavItem {
-    id: number
-    name: string
-    path: string
+    id: number;
+    name: string;
+    path: string;
 }
 
 export const Navigation: React.FC = () => (
@@ -55,4 +55,4 @@ export const Navigation: React.FC = () => (
             ),
         )}
     </NavBar>
-)
+);

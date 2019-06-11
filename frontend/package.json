@@ -23,7 +23,7 @@
         "test": "react-app-rewired test",
         "eject": "react-app-rewired eject",
         "tslint-check": "tslint-config-prettier-check ./tslint.json",
-        "format": "prettier --config .prettierrc --write src/**/**/**/*.{js,jsx}"
+        "format": "prettier --config .prettierrc --write src/**/**/**/*.{js,jsx,ts,tsx}"
     },
     "eslintConfig": {
         "extends": "react-app"

@@ -1,11 +1,11 @@
-import React, { useRef, useState } from 'react'
-import useStore from 'global-hook-store'
+import React, { useRef, useState } from 'react';
+import useStore from 'global-hook-store';
 
-import { store } from '@src/store'
-import { QuestionForm } from 'Components/QuestionForm/QuestionForm'
+import { store } from '@src/store';
+import { QuestionForm } from 'Components/QuestionForm/QuestionForm';
 
 export const Create: React.FC = () => {
-    const { state, actions } = useStore(store)
+    const { state, actions } = useStore(store);
 
     return (
         <div>
@@ -20,5 +20,5 @@ export const Create: React.FC = () => {
                 </div>
             )}
         </div>
-    )
-}
+    );
+};

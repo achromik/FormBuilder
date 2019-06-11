@@ -1,5 +1,5 @@
-import { Home } from 'Containers/Home/Home'
-import { Create } from 'Containers/Create/Create'
+import { Home } from 'Containers/Home/Home';
+import { Create } from 'Containers/Create/Create';
 
 export const navItems = [
     {
@@ -24,11 +24,11 @@ export const navItems = [
         name: 'Export',
         path: '/export',
     },
-]
+];
 
 export const formData = {
     question: {
         label: 'Question',
         placeholder: 'Please enter a question!',
     },
-}
+};
