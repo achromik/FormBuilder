@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStore, useLocalStore } from 'global-hook-store';
 
-import { Question } from '@src/common/models';
+import { Question } from '@src/common/models/question';
 
 interface Store {
     questions: Question[];
