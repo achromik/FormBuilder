@@ -1,9 +1,11 @@
 import { Home } from 'Containers/Home/Home';
 import { Create } from 'Containers/Create/Create';
+import { Export } from 'Containers/Export/Export';
+import { Preview } from 'Containers/Preview/Preview';
 
 export const navItems = [
     {
-        id: 1,
+        id: 0,
         name: '🏠',
         path: '/',
         Component: Home,
@@ -18,11 +20,13 @@ export const navItems = [
         id: 2,
         name: 'Preview',
         path: '/preview',
+        Component: Preview,
     },
     {
         id: 3,
         name: 'Export',
         path: '/export',
+        Component: Export,
     },
 ];
 

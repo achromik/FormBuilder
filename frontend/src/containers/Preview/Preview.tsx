@@ -1,3 +1,3 @@
 import * as React from 'react';
 
-export const Home: React.FC = () => <div>Home page</div>;
+export const Preview: React.FC = () => <div>Preview</div>;
