@@ -23,6 +23,7 @@
         "no-submodule-imports": false,
         "no-var-requires": false,
         "trailing-comma": false,
-        "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"]
+        "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"],
+        "type-literal-delimiter": true
     }
 }
