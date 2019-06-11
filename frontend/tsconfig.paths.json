@@ -5,7 +5,7 @@
             "Components/*": ["./src/components/*"],
             "Containers/*": ["./src/containers/*"],
             "@src/*": ["./src/*"]
-        }
-        // "isolatedModules": false
+        },
+        "allowJs": true
     }
 }
