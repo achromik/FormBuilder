@@ -25,3 +25,10 @@ export const navItems = [
         path: '/export',
     },
 ]
+
+export const formData = {
+    question: {
+        label: 'Question',
+        placeholder: 'Please enter a question!',
+    },
+}
