@@ -9,6 +9,7 @@ const parsedLocalStore = localStore !== null && JSON.parse(localStore);
 
 const initialState: FormBuilderStore = {
     questions: localStore ? parsedLocalStore.questions : [],
+    answers: localStore ? parsedLocalStore.answers : [],
     appState: localStore ? parsedLocalStore.appState : '',
 };
 
