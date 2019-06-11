@@ -6,6 +6,7 @@
         "@emotion/core": "^10.0.10",
         "@emotion/styled": "^10.0.11",
         "customize-cra": "^0.2.12",
+        "dexie": "^2.0.4",
         "global-hook-store": "^0.3.2",
         "prettier": "^1.18.0",
         "react": "^16.8.6",
