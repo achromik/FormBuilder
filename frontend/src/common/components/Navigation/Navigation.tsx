@@ -39,20 +39,12 @@ const NavLink = styled(Link)`
     }
 `;
 
-interface NavItem {
-    id: number;
-    name: string;
-    path: string;
-}
-
 export const Navigation: React.FC = () => (
     <NavBar>
-        {navItems.map(
-            ({ id, name, path }: NavItem): React.ReactNode => (
-                <NavLink key={id} to={path}>
-                    <NavItem>{name}</NavItem>
-                </NavLink>
-            ),
-        )}
+        {navItems.map(({ id, name, path }) => (
+            <NavLink key={id} to={path}>
+                <NavItem>{name}</NavItem>
+            </NavLink>
+        ))}
     </NavBar>
 );
