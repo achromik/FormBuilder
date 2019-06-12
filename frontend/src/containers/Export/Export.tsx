@@ -1,5 +1,6 @@
 import React from 'react';
 import useStore from 'global-hook-store';
+import ReactJSON from 'react-json-view';
 
 import { store } from '@src/store';
 
@@ -10,7 +11,13 @@ export const Export: React.FC = () => {
         <div>
             <p>Export</p>
 
-            <pre>{JSON.stringify(state)}</pre>
+            <ReactJSON
+                src={state}
+                name={false}
+                theme="summerfruit:inverted"
+                displayDataTypes={false}
+                sortKeys={true}
+            />
         </div>
     );
 };
