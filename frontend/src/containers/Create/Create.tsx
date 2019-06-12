@@ -1,34 +1,23 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import useStore from 'global-hook-store';
 
-import { store, saveState } from '@src/store';
+import { store } from '@src/store';
+import db from '@src/common/db';
 
 import { QuestionForm } from 'Components/QuestionForm/QuestionForm';
 
 export const Create: React.FC = () => {
     const { state, actions } = useStore(store);
 
-    useEffect(() => {
-        saveState(state);
-    }, [state]);
+    const handleAddQuestion = (): void => {
+        db.questions.add({ text: 'test' }).then(id => actions.addQuestion({ id, text: 'test' }));
+    };
 
     return (
         <div>
             Create page
-            {state.questions.length > 0 ? (
-                <div>
-                    <QuestionForm />
-                    <button onClick={() => actions.addQuestion({ id: '2', text: 'test' })} />
-                </div>
-            ) : (
-                <div>
-                    <button
-                        onClick={() => {
-                            return actions.addQuestion({ id: '2', text: 'test' });
-                        }}
-                    />
-                </div>
-            )}
+            {state.questions.length > 0 && <QuestionForm />}
+            <button onClick={handleAddQuestion} />
         </div>
     );
 };

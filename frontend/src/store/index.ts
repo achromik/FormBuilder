@@ -3,14 +3,15 @@ import { createStore } from 'global-hook-store';
 import { Question } from '@src/common/models/question';
 
 import { FormBuilderStore } from './models';
+import db from '../common/db';
 
-const localStore = window.localStorage.getItem('store');
-const parsedLocalStore = localStore !== null && JSON.parse(localStore);
+// const localStore = window.localStorage.getItem('store');
+// const parsedLocalStore = localStore !== null && JSON.parse(localStore);
 
 const initialState: FormBuilderStore = {
-    questions: localStore ? parsedLocalStore.questions : [],
-    answers: localStore ? parsedLocalStore.answers : [],
-    appState: localStore ? parsedLocalStore.appState : '',
+    questions: [],
+    answers: [],
+    appState: '',
 };
 
 export const saveState = (state: FormBuilderStore): void => {
@@ -22,4 +23,12 @@ export const store = createStore({ ...initialState } as FormBuilderStore, {
         ...store,
         questions: [...store.questions, payload],
     }),
+    loadQuestionsFromIndexDB: async store => {
+        const questions = await db.questions.toArray().then(questions => questions);
+
+        return {
+            ...store,
+            questions,
+        };
+    },
 });
