@@ -31,7 +31,7 @@ export const navItems = [
 ];
 
 export const formData = {
-    question: {
+    questionInput: {
         label: 'Question',
         placeholder: 'Please enter a question!',
     },

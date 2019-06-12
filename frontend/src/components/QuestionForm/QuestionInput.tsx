@@ -16,15 +16,15 @@ const Input = styled.input`
     flex: 1;
 `;
 
-interface LabeledInput {
+interface QuestionInput {
     label?: string;
     placeholder?: string;
 }
 
-export const LabeledInput: React.FC<LabeledInput> = ({
+export const QuestionInput: React.FC<QuestionInput> = ({
     label = '',
     placeholder = '',
-}: LabeledInput) => (
+}: QuestionInput) => (
     <Container>
         <Label>{label}</Label>
         <Input type="text" placeholder={placeholder} />

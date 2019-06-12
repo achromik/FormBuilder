@@ -1,8 +1,8 @@
-import * as React from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 
 import { formData } from '@src/data/config';
-import { LabeledInput } from 'Components/LabeledInput';
+import { QuestionInput } from 'Components/QuestionForm/QuestionInput';
 
 const QuestionFormWrapper = styled.div`
     padding: 1rem;
@@ -10,12 +10,15 @@ const QuestionFormWrapper = styled.div`
     width: 500px;
 `;
 export const QuestionForm: React.FC = () => {
-    const { question } = formData;
+    const { questionInput } = formData;
     return (
         <QuestionFormWrapper>
             <form onSubmit={e => e.preventDefault()}>
-                <LabeledInput label={question.label} placeholder={question.placeholder} />
-                <button>Test</button>
+                <QuestionInput
+                    label={questionInput.label}
+                    placeholder={questionInput.placeholder}
+                />
+                <button>ADD</button>
             </form>
         </QuestionFormWrapper>
     );
