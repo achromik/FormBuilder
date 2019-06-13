@@ -31,4 +31,12 @@ export const store = createStore({ ...initialState } as FormBuilderStore, {
             questions,
         };
     },
+
+    saveForm: (store, { id, question }: { id: number; question: Question }) => {
+        //TODO save updated question
+        return {
+            ...store,
+        };
+    },
+    updateQuestion: (store, { id, question }: { id: number; question: Question }) => ({ ...store }),
 });

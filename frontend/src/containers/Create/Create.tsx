@@ -8,16 +8,22 @@ import { QuestionForm } from 'Components/QuestionForm/QuestionForm';
 
 export const Create: React.FC = () => {
     const { state, actions } = useStore(store);
-
-    const handleAddQuestion = (): void => {
-        db.questions.add({ text: 'test' }).then(id => actions.addQuestion({ id, text: 'test' }));
+    const { questions } = state;
+    const handleAddQuestionText = (text: string): void => {
+        db.questions.add({ id: -1, text }).then(id => actions.addQuestion({ id, text }));
     };
 
     return (
         <div>
             Create page
-            {state.questions.length > 0 && <QuestionForm />}
-            <button onClick={handleAddQuestion} />
+            {questions.map(question => (
+                <QuestionForm
+                    key={question.id}
+                    question={question}
+                    handleAddQuestionText={handleAddQuestionText}
+                />
+            ))}
+            {/* <button onClick={handleAddQuestionText} /> */}
         </div>
     );
 };
